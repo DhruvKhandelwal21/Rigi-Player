@@ -68,7 +68,7 @@ const Playlist = () => {
   };
 
   return (
-    <div className="flex flex-col w-full h-full bg-[#CFBEFF]">
+    <div className="flex flex-col w-full h-[100%] bg-[#CFBEFF] pt-20">
       <div className="flex xs:flex-col md:flex-row gap-2 items-center justify-start p-2">
         <div className="flex gap-2 ">
           <button
@@ -84,7 +84,7 @@ const Playlist = () => {
             Edit Playlist
           </button>
         </div>
-        
+
         <input
           className="md:w-1/5 xs:w-full sm:w-1/2 px-4 py-2 rounded-md font-mono"
           placeholder="Enter the title"
