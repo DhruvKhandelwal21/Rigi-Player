@@ -13,6 +13,21 @@
   color-scheme: light;
 }
 
+body::-webkit-scrollbar {
+  width: 10px; /* Set the width of the scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Set the background color of the scrollbar track */
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #888; /* Set the color of the scrollbar thumb */
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Set the color of the scrollbar thumb on hover */
+}
 /* background: linear-gradient(
   to right,
   #d72727,

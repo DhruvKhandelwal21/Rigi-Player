@@ -6,8 +6,9 @@ interface childrenNode{
 interface Video {
     id: number;
     order: number;
-    name: string;
+    title: string;
     src: string;
+    thumb: string;
   }
   
 interface PlaylistContextType{

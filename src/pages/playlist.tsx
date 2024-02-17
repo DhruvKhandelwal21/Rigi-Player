@@ -6,8 +6,9 @@ import VideoCard from "../components/VideoPlayer/videoCard";
 import { usePlaylist } from "../context/playlistContext";
 interface Video {
   id: number;
-  name: string;
+  title: string;
   src: string;
+  thumb: string;
 }
 let searchTimeout: any;
 const Playlist = () => {
@@ -58,7 +59,7 @@ const Playlist = () => {
   const fetchFilteredData = () => {
     if(searchText.length){
         const data: any = playlistState?.filter((item: any) =>
-        item.name.toLowerCase().includes(searchText.toLowerCase())
+        item.title.toLowerCase().includes(searchText.toLowerCase())
       );
       setFilteredData(data);
     }else{
@@ -93,8 +94,9 @@ const Playlist = () => {
         {filteredData?.length ? filteredData?.map((item) => (
           <VideoCard
             id={item.id}
-            name={item.name}
+            title={item.title}
             src={item.src}
+            thumb={item.thumb}
             deleteVideo={true}
             handleDelete={handleDeletePlaylistVideo}
           />

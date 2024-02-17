@@ -2,12 +2,12 @@ import React, { useRef } from "react";
 import useVideoPlayer from "../../hooks/useVideoPlayer";
 import { fastFoward, play, pause, undo, fullscreen } from "../../assets";
 interface VideoPlayerProps {
-  name: string;
+  title: string;
   src: string;
   onClose: () => void;
 }
 
-const VideoPlayer: React.FC<VideoPlayerProps> = ({ name, src, onClose }) => {
+const VideoPlayer: React.FC<VideoPlayerProps> = ({ title, src, onClose }) => {
   const videoRef = useRef<HTMLVideoElement>(null);
   const {
     playState,
@@ -31,7 +31,7 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({ name, src, onClose }) => {
         onClick={(e) => e.stopPropagation()}
       >
         <div className="flex justify-between items-center">
-          <p className=" text-xl font-semibold">{name}</p>
+          <p className=" text-xl font-semibold">{title}</p>
           <button
             className="bg-black text-white py-1 px-2 rounded-md"
             onClick={() => {

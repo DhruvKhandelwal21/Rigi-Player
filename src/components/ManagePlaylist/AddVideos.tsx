@@ -49,18 +49,18 @@ const AddVideos: React.FC<AddVideosProps> = ({ onClose, onAddToPlayList }) => {
             </button>
           </div>
         </div>
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-4 overflow-y-auto scroll-smooth scrollbar-thin scrollbar-thumb-gray-600 scrollbar-track-gray-100">
           {VIDEOS.map((item, index) => {
             return (
               <div className="flex gap-2 items-center w-full bg-[#FCEEFF] my-1 px-2 max-h-fit rounded-md py-1 " key={index}>
                 <input
                   type="checkbox"
                   className='h-4 w-4'
-                  name={item.name}
+                  name={item.title}
                   checked={checkedItems.includes(item.id)}
                   onChange={(e) => handleCheckboxChange(e, item.id)}
                 />
-                <p className="font-mono text-md ">{item.name}</p>
+                <p className="font-mono text-md ">{item.title}</p>
               </div>
             );
           })}

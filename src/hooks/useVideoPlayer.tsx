@@ -15,7 +15,7 @@ const useVideoPlayer = (videoRef: any) => {
     videoRef.current.currentTime -= 5;
   };
 
-const togglePlay = () => {
+  const togglePlay = () => {
     setPlayState({
       ...playState,
       isPlaying: !playState.isPlaying,
@@ -23,9 +23,7 @@ const togglePlay = () => {
   };
 
   useEffect(() => {
-    playState.isPlaying
-      ? videoRef.current.play()
-      : videoRef.current.pause();
+    playState.isPlaying ? videoRef.current.play() : videoRef.current.pause();
   }, [playState.isPlaying, videoRef]);
 
   const handleDefaultProgress = (_e: any) => {
@@ -38,9 +36,9 @@ const togglePlay = () => {
   };
 
   const handleManualProgress = (e: any) => {
-    const progressValue = parseFloat(e.target.value);
-    const progress = (progressValue / videoRef.current.duration) * 100;
-    videoRef.current.currentTime = progressValue
+    const progress = parseFloat(e.target.value);
+    const progressValue = (videoRef.current.duration / 100) * progress;
+    videoRef.current.currentTime = progressValue;
     setPlayState({
       ...playState,
       progress,
@@ -58,11 +56,11 @@ const togglePlay = () => {
 
   const toggleFullscreen = () => {
     if (videoRef.current) {
-        videoRef.current.requestFullscreen();
+      videoRef.current.requestFullscreen();
     }
-}
+  };
 
-const handleVolumeChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleVolumeChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const newVolume = parseFloat(e.target.value);
 
     if (videoRef.current) {
@@ -79,7 +77,7 @@ const handleVolumeChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     handleManualProgress,
     handlePlayBackSpeed,
     toggleFullscreen,
-    handleVolumeChange
+    handleVolumeChange,
   };
 };
 

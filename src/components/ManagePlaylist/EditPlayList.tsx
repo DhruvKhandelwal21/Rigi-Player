@@ -42,7 +42,7 @@ const VideoList = ({ video, index, moveVideoItem }: any) => {
 
   return (
     <div className='w-full bg-[#FCEEFF] my-1 flex justify-center items-center max-h-fit rounded-md py-1 hover:cursor-move' ref={dragDropRef} style={{ opacity: isDragging ? 0.5 : 1 }}>
-      <h3>{video.name}</h3>
+      <h3>{video.title}</h3>
     </div>
   );
 };
@@ -89,7 +89,7 @@ const EditPlayList = ({ onClose }: any) => {
             </button>
           </div>
         </div>
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-4 overflow-y-auto scroll-smooth scrollbar-thin scrollbar-thumb-gray-600 scrollbar-track-gray-100">
           <DndProvider backend={HTML5Backend}>
             {playlistState?.length ? playlistState.map((video, index) => (
               <VideoList
