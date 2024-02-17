@@ -68,7 +68,7 @@ const Playlist = () => {
   };
 
   return (
-    <div className="flex flex-col w-full h-[100%] bg-[#CFBEFF] pt-20">
+    <div className="flex flex-col w-full min-h-screen bg-[#CFBEFF] pt-20">
       <div className="flex xs:flex-col md:flex-row gap-2 items-center justify-start p-2">
         <div className="flex gap-2 ">
           <button

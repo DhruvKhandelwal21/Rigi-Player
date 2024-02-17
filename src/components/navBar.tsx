@@ -5,7 +5,7 @@ const NavBar = () => {
   return (
     <div className="w-full h-[7vh] p-2 bg-[#1D0638] flex justify-between items-center fixed top-0 z-10">
         <img src={cinema} className='w-[40px] h-[40px] p-1' />
-      <h3 className="font-mono font-semibold text-xl text-white xs:hidden md:block">Watch Videos for Free</h3>
+      <h3 className="font-mono font-semibold text-xl text-white xs:hidden md:block">RIGI Player</h3>
       <div className="flex justify-center gap-2 my-2">
         <button
           className="px-4 py-2 font-mono text-white font-semibold"
