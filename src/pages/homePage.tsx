@@ -1,4 +1,3 @@
-import React from "react";
 import VideoCard from "../components/VideoPlayer/videoCard";
 import { VIDEOS } from "../helpers/sampleVideos";
 const HomePage = () => {

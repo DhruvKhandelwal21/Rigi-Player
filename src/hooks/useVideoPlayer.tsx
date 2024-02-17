@@ -28,7 +28,7 @@ const togglePlay = () => {
       : videoRef.current.pause();
   }, [playState.isPlaying, videoRef]);
 
-  const handleDefaultProgress = (e: any) => {
+  const handleDefaultProgress = (_e: any) => {
     const progress =
       (videoRef.current.currentTime / videoRef.current.duration) * 100;
     setPlayState({

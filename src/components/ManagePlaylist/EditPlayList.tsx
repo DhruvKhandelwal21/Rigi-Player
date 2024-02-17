@@ -1,4 +1,4 @@
-import React, { useCallback, useRef } from "react";
+import { useCallback, useRef } from "react";
 import { DndProvider, useDrag, useDrop } from "react-dnd";
 import { HTML5Backend } from "react-dnd-html5-backend";
 import { usePlaylist } from "../../context/playlistContext";
@@ -16,7 +16,7 @@ const VideoList = ({ video, index, moveVideoItem }: any) => {
   });
 
   // useDrop - the list item is also a drop area
-  const [spec, dropRef] = useDrop({
+  const [, dropRef] = useDrop({
     accept: type,
     hover: (item: any, monitor: any) => {
       const dragIndex = item.index;
@@ -54,7 +54,7 @@ const EditPlayList = ({ onClose }: any) => {
   const moveVideoItem = useCallback(
     (dragIndex: number, hoverIndex: number) => {
       const dragItem = playlistState[dragIndex];
-      const hoverItem = playlistState[hoverIndex];
+      // const hoverItem = playlistState[hoverIndex];
       // Swap places of dragItem and hoverItem in the pets array
       const updatedData = update(playlistState, {
         $splice: [

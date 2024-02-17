@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import AddVideos from "../components/ManagePlaylist/AddVideos";
 import EditPlayList from "../components/ManagePlaylist/EditPlayList";
 import { VIDEOS } from "../helpers/sampleVideos";
