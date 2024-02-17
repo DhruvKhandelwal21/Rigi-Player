@@ -3,7 +3,7 @@ import { cinema } from "../assets";
 const NavBar = () => {
   const navigate = useNavigate();
   return (
-    <div className="w-full h-[7vh] p-2 bg-[#1D0638] flex justify-between items-center">
+    <div className="w-full h-[7vh] p-2 bg-[#1D0638] flex justify-between items-center fixed top-0 z-10">
         <img src={cinema} className='w-[40px] h-[40px] p-1' />
       <h3 className="font-mono font-semibold text-xl text-white xs:hidden md:block">Watch Videos for Free</h3>
       <div className="flex justify-center gap-2 my-2">
