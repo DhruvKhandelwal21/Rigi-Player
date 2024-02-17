@@ -17,7 +17,7 @@ const NavBar = () => {
           className="px-4 py-2 font-mono text-white font-semibold"
           onClick={() => navigate("/playlist")}
         >
-          All Playlists
+          My Playlist
         </button>
       </div>
     </div>
