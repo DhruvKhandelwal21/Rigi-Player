@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import AddVideos from "../components/ManagePlaylist/AddVideos";
-import EditPlayList from "../components/ManagePlaylist/EditPlayList";
+import EditPlayList from "../components/ManagePlaylist/RearrangePlayList";
 import { VIDEOS } from "../helpers/sampleVideos";
 import VideoCard from "../components/VideoPlayer/videoCard";
 import { usePlaylist } from "../context/playlistContext";
